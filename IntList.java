@@ -1,16 +1,16 @@
 package lab2;
 
-public class intlist{
+public class IntList{
 	public int first;
-	public intlist rest;
+	public IntList rest;
 	
 	public static void main(String[] args) {
-		intlist myList = new intlist(0, null);
-	    myList.rest = new intlist(1, null);
-	    myList.rest.rest = new intlist(2, null);
-	    myList.rest.rest.rest = new intlist(3, null);
+		IntList myList = new IntList(0, null);
+	    myList.rest = new IntList(1, null);
+	    myList.rest.rest = new IntList(2, null);
+	    myList.rest.rest.rest = new IntList(3, null);
 	    
-	    intlist squarelist=myList.squarelistinteractive(myList.rest);
+	    IntList squarelist=myList.squarelistinteractive(myList.rest);
 	    while (squarelist!=null) {
 	    	System.out.println(squarelist.first);
 	    	squarelist=squarelist.rest;
@@ -19,14 +19,14 @@ public class intlist{
 	}
 
 	
-	public intlist(int x,intlist r) {
+	public IntList(int x,IntList r) {
 		first=x;
 		rest=r;
 	}
 	
-	public void dsquarelist(intlist l) {
+	public void dsquarelist(IntList l) {
 		l.first=l.first*l.first;
-		intlist q=l.rest;
+		IntList q=l.rest;
 		
 		while(q!=null) {
 			q.first=q.first*q.first;
@@ -34,10 +34,10 @@ public class intlist{
 		}
 	}
 	
-    public intlist squarelistinteractive(intlist l) {
-    	intlist L=l;
+    public IntList squarelistinteractive(IntList l) {
+    	IntList L=l;
     	L.first=L.first*L.first;
-    	intlist q=L.rest;
+    	IntList q=L.rest;
     	
     	while (q!=null) {
     		q.first=q.first*q.first;
@@ -47,16 +47,16 @@ public class intlist{
     	return L;
 	}
     
-    public intlist squarelistrecursive(intlist l) {
-    	intlist L=l;
+    public IntList squarelistrecursive(IntList l) {
+    	IntList L=l;
     	L.first=L.first*L.first;
     	L.rest=squarelistrecursive(L.rest);
     	
     	return L;
     }
     
-    public intlist dcatenate(intlist A, intlist B) {
-    	intlist q=A.rest;
+    public IntList dcatenate(IntList A, IntList B) {
+    	IntList q=A.rest;
     	
     	while (q.rest!=null) {
 			q=q.rest;
@@ -67,9 +67,9 @@ public class intlist{
     	
     }
     
-    public intlist catenate(intlist A, intlist B) {
-    	intlist L=A;
-    	intlist q=L.rest;
+    public IntList catenate(IntList A, IntList B) {
+    	IntList L=A;
+    	IntList q=L.rest;
     	
     	while (q.rest!=null) {
 			q=q.rest;

@@ -10,7 +10,7 @@ public class intlist{
 	    myList.rest.rest = new intlist(2, null);
 	    myList.rest.rest.rest = new intlist(3, null);
 	    
-	    intlist squarelist=myList.squarelistinteractive(myList);
+	    intlist squarelist=myList.squarelistinteractive(myList.rest);
 	    while (squarelist!=null) {
 	    	System.out.println(squarelist.first);
 	    	squarelist=squarelist.rest;

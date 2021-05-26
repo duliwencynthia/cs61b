@@ -4,11 +4,11 @@ public class IntList{
 	public int first;
 	public IntList rest;
 	
-	public static void main(String[] args) {
-	    IntList myList = new IntList(0, null);
-	    myList.rest = new IntList(1, null);
-	    myList.rest.rest = new IntList(2, null);
-	    myList.rest.rest.rest = new IntList(3, null);
+// 	public static void main(String[] args) {
+// 	    IntList myList = new IntList(0, null);
+// 	    myList.rest = new IntList(1, null);
+// 	    myList.rest.rest = new IntList(2, null);
+// 	    myList.rest.rest.rest = new IntList(3, null);
 	    
 // 	    IntList squarelist=myList.squarelistinteractive(myList.rest);
 // 	    while (squarelist!=null) {
@@ -16,7 +16,7 @@ public class IntList{
 // 	    	squarelist=squarelist.rest;
 // 	    }
 
-	}
+// 	}
 
 	
 	public IntList(int x,IntList r) {
